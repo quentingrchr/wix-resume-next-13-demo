@@ -1,5 +1,7 @@
 import "../styles/global.css";
 import localFont from "@next/font/local";
+import { Navigation } from "./components";
+import Logo from "./components/logo/Logo";
 
 const avenir = localFont({
   src: [
@@ -48,7 +50,28 @@ export default function RootLayout({
       lang="en"
       className={`${avenir.variable} ${helveticaNeue.variable} ${poppins.variable} font-avenir`}
     >
-      <body>{children}</body>
+      <body className="w-full">
+        <header className="bg-white fixed top-0 h-[100px] w-full flex justify-between align-middle max-w-[1600px] m-auto px-12 shadow-md">
+          <Logo />
+          <Navigation
+            items={[
+              {
+                label: "Home",
+                to: "/",
+              },
+              {
+                label: "About",
+                to: "/about",
+              },
+              {
+                label: "Contact",
+                to: "/contact",
+              },
+            ]}
+          />
+        </header>
+        <main className="pt-[100px]">{children}</main>
+      </body>
     </html>
   );
 }

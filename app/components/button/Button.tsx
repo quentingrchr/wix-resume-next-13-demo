@@ -1,5 +1,6 @@
 "use client";
 
+import isExternalLink from "@/app/utils/isExternalLink";
 import Link from "next/link";
 import React from "react";
 
@@ -24,11 +25,7 @@ export default function Button(props: IProps) {
   }
 
   if (!!to) {
-    if (
-      to.startsWith("http") ||
-      to.startsWith("mailto") ||
-      to.startsWith("www")
-    ) {
+    if (isExternalLink(to)) {
       return (
         <a
           className={`${
