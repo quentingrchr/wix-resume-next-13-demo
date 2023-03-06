@@ -12,7 +12,13 @@ module.exports = {
       lightBeige: "#f4ece6",
       beige: "#e6d2ce",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        avenir: ['var(--font-avenir)'],
+        poppins: ['var(--font-poppins)'],
+        helvetica: ['var(--font-helvetica)'],
+      },
+    },
   },
   plugins: [],
 }

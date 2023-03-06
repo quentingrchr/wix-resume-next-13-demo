@@ -1,4 +1,37 @@
 import "../styles/global.css";
+import localFont from "@next/font/local";
+
+const avenir = localFont({
+  src: [
+    {
+      path: "../public/fonts/avenir-lt-heavy.woff2",
+      weight: "700",
+    },
+    {
+      path: "../public/fonts/avenir-lt-light.woff2",
+      weight: "200",
+    },
+  ],
+  variable: "--font-avenir",
+});
+
+const helveticaNeue = localFont({
+  src: [
+    {
+      path: "../public/fonts/helvetica-neue-roman.woff",
+    },
+  ],
+  variable: "--font-helvetica-neue",
+});
+
+const poppins = localFont({
+  src: [
+    {
+      path: "../public/fonts/poppins-bold.woff2",
+    },
+  ],
+  variable: "--font-poppins",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +44,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${avenir.variable} ${helveticaNeue.variable} ${poppins.variable} font-avenir`}
+    >
       <body>{children}</body>
     </html>
   );
