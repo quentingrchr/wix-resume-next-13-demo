@@ -9,6 +9,7 @@ export default function Home() {
     <main>
       <h1 className="text-3xl font-bold underline">Test</h1>
       <Button>CV</Button>
+      <Button variant="secondary">Projets</Button>
     </main>
   );
 }

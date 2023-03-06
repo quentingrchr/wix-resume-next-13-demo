@@ -11,6 +11,15 @@ module.exports = {
       brand: "#0050ff",
       lightBeige: "#f4ece6",
       beige: "#e6d2ce",
+      white: "#fff",
+      black: "#000",
+    },
+    textColor: {
+      brand: "#0050ff",
+      lightBeige: "#f4ece6",
+      beige: "#e6d2ce",
+      white: "#fff",
+      black: "#000",
     },
     extend: {
       fontFamily: {
